@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Comet Finance | Presale</title>
+
+        <link rel="icon" href="./favicon.png" type="image/x-icon">
+        <link href="./font awsome css/all.css" rel="stylesheet">
+        <link href="THOU%20Pre-Sale_files/bootstrap.css" rel="stylesheet">
+        <link href="THOU%20Pre-Sale_files/style.css" rel="stylesheet">
+        <link href="THOU%20Pre-Sale_files/responsive.css" rel="stylesheet">
+        <style media="screen">
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background-color: #033c5e !important;
+                overflow: hidden;
+            }
+            .footer {
+                background: rgba(0, 0, 0, 0.2);
+                background: url('images/background/footer-bg-6.png');
+                background-position: top;
+                background-size: contain;
+            }
+            .presale-popup .modal {
+                background: #1a0c68;
+                background: rgba(0, 0, 0, 0.6);
+            }
+            .presale-popup .close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 99999;
+            }
+            .presale-popup .modal-content {
+                background: #218bf4;
+            }
+            .presale-popup .modal-content .countdown-timer > div,
+            .presale-section .countdown-timer > div {
+                display: inline-block;
+            }
+            .presale-popup .modal-content .wrapper,
+            .presale-section .wrapper {
+                text-align: center;
+            }
+            .presale-popup .modal-content .time,
+            .presale-section .time {
+                color: #fff;
+                font-size: 2em;
+            }
+            .presale-popup .modal-content .label,
+            .presale-section .label {
+                font-size: 1em;
+                display: block;
+                color: #fff;
+            }
+            .presale-section .time,
+            .presale-section .label {
+                color: #5132ca;
+            }
+            .presale-section h1,
+            .presale-section h2,
+            .presale-section h4,
+            .presale-section p {
+                color: #5132ca;
+                color: aliceblue;
+            }
+            .presale-section .btn {
+                background-color: #5132ca;
+                color: #fff;
+            }
+            .presale-section .btn:hover {
+                background-color: #492db5;
+                transform: scale(1.05);
+                -webkit-transition: transform 0.4s ease;
+                transition: transform 0.4s ease;
+            }
+            .btn-box .btn-one {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                font-size: 18px;
+                color: #fff;
+                line-height: 30px;
+                font-weight: 500;
+                background: #4527a4;
+                padding: 15px 30px;
+                text-align: center;
+                border-radius: 30px;
+                margin-right: 35px;
+                z-index: 1;
+            }
+            .btn-box .btn-one::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: #fff;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+                -webkit-transform: scale(0.2, 1);
+                transform: scale(0.2, 1);
+                z-index: -1;
+            }
+            .btn-box .btn-one:hover {
+                background: #fff;
+                color: #4527a4;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            }
+            .presale-popup .btn-box .btn-one {
+                color: #0a4d91;
+                background: #fff;
+            }
+            .presale-popup .btn-box .btn-one::before {
+                background-color: #0a4d91;
+            }
+            .presale-popup .btn-box .btn-one:hover {
+                background: #0a4d91;
+                color: #fff;
+            }
+            .btn-box .btn-one:hover::before {
+                opacity: 1;
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+            /*new for this page*/
+            .progress {
+                height: auto;
+                padding: 4px;
+                background-color: rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+            }
+            .progress .progress-bar {
+                height: 24px;
+                border-radius: 0.25rem;
+                background: rgb(2, 0, 36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,242,164,1) 0%, rgba(0,255,115,1) 100%);
+            }
+
+            .presale-section .card-body {
+                background: #47209c;
+            }
+            .presale-section .countdown-timer .wrapper .label,
+            .presale-section .countdown-timer .wrapper .time {
+                color: aliceblue;
+                text-transform: uppercase;
+            }
+            .presale-section .countdown-timer .wrapper .label {
+                margin-top: 0.7rem;
+            }
+            .presale-section .countdown-timer .wrapper .time {
+                background: rgba(0, 0, 0, 0.25);
+                padding: 8px;
+                border-radius: 8px;
+            }
+            .slider.slider-horizontal {
+                width: 80%;
+                height: 30px;
+            }
+            .slider.slider-horizontal .slider-track {
+                height: 20px;
+                box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.15);
+                background: transparent;
+            }
+            .slider-handle {
+                top: 10px;
+                width: 20px;
+                height: 20px;
+                background: #17ba95;
+            }
+            .slider-selection {
+                background: rgb(2, 0, 36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,145,0.9556022237996761) 0%, rgba(91,227,196,0.9163865375251663) 100%);
+            }
+            .slider-track-high,
+            .disclaimer {
+                background: rgba(0, 0, 0, 0.25);
+            }
+            .endPhase1 {
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                display: block;
+                overflow: hidden;
+                z-index: 999999;
+            }
+            @media(min-width:576px) {
+                .presale-section .countdown-timer .wrapper .time {
+                    padding: 16px;
+                }
+            }
+
+            .social {
+                text-align: center;
+                max-width: 1100px;
+                margin: auto;
+                position: relative;
+                height: 100vh;
+            }
+            .social-box {
+                height: 100px;
+                width: 100%;
+                position: absolute;
+                bottom: 380px;
+                text-align: center;
+            }
+            .logo {
+                text-align: left;
+                max-width: 1350px;
+                margin: 50px auto auto;
+                position: relative;
+                height: 50px;
+
+            }
+        </style>
+    </head>
+
+    <body class="boxed_wrapper">
+        <figure class="logo">
+            <a href="https://thou.finance/index.html"><img src="llogo.png" class="mobilell" alt="logo" style="max-width:200px; "></a>
+            <!--<a href="index.html"><span style="color: red; font-size: 30px; font-weight: 700;">SR</span><span style="color: white; font-size: 15px; font-weight: 700;">Page <span style="color: red;">[ </span>Designing<span style="color: red;"> ]</span> </span></a>-->
+
+        </figure>
+
+        <div class="preloader" style="display: none;"></div>
+
+        <section class="endPhase1">
+            <div class="container py-5">
+                <div class="text-center py-5 my-5 text-white">
+                    <h1 class="mb-2 pt-4">Presale will begin Soon</h1>
+                    <h3>Stay updated on
+                        <a href="https://t.me/thoufinance" class="text-white">Telegram</a>
+                        or
+                        <a href="https://discord.gg/Yd8Hzg4" class="text-white">Discord</a>
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section class="social">
+
+            <div class="social-box">
+                <div class="sec-title center">
+                    <h2 class="text-white">Connect</h2>
+                </div>
+                <div>
+                    <a href="https://t.me/cometfinance" class="text-white h1 mr-3" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://twitter.com/CometFinance" class="text-white h1 mx-3" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://discord.gg/Q7MgeKB" class="text-white h1 mx-3" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://medium.com/@cometfinance.net" class="text-white h1 mx-3" target="_blank">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    <a href="https://github.com/comet-finance" class="text-white h1 ml-3" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </body>
+</html>

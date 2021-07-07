@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comet Finance | Presale</title>
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <link href="./font awsome css/all.css" rel="stylesheet">
+    <link href="THOU%20Pre-Sale_files/bootstrap.css" rel="stylesheet">
+    <link href="./THOU Pre-Sale_files/responsive.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #033c5e !important;
+            padding: 50px 100px;
+        }
+        .headinta{
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        /*.headinta h3 a{
+            text-decoration: none;
+        }*/
+
+        .social-box{
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        .linee{
+            height: 2px;
+            width: 60px;
+            background-color: white;
+            text-align: center;
+            margin-bottom: 3%;"
+        }
+
+
+        .counterbody{
+            display: inline-block;
+        }
+        .counterbody .day1{
+            margin: 10px;
+            background-color:rgb(1, 35, 63);
+            width: 170px;
+            padding: 50px 0;
+            position: relative;
+            text-align: center;
+            
+        }
+        .counterbody .day1 span{
+            color: white;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center !important;
+        }
+        .counterbody .day1 p{
+            font-size: 20px;
+            position: absolute;
+            bottom: 10px;
+            left:  0;
+            right: 0;
+            margin: auto;
+            opacity: .7;
+            text-align: center;
+            color: white;
+        }
+        .maincount{
+            margin-top: 60px;
+        }
+        #getting-started{
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="head">
+        <a href="https://thou.finance/index.html"><img src="llogo.png" class="mobilell" alt="logo" style="max-width:200px; "></a>
+    </div>
+    <div class="headinta">
+        <h1 class="mb-2 pt-4" style="font-weight: 600;">Presale will begin Soon</h1>
+        <h3>Stay updated on
+            <a href="https://t.me/thoufinance" class="text-white">Telegram</a>
+            or
+            <a href="https://discord.gg/Yd8Hzg4" class="text-white">Discord</a>
+        </h3>
+    </div>
+    <div class="maincount">
+        <div id="getting-started"></div>
+    </div>
+    <h2 style="text-align: center; color: white; font-size: 35px; font-weight: 600; margin-top: 40px; margin-bottom: 40px;">COMET presale details</h2>
+    <div class="presale-details" style=" color: white; display: inline-flex; width: 100%;">
+        <div class="details1" style="text-align: left; display: flex;width: 50%; margin: auto; max-width: 800px;">
+            <ul style="list-style-type: disc; font-size: 24px;">
+                <li> Total supply: 10,000 COMT</li>
+                <li> Presale: 3,000 COMT (30%)</li>
+                <li> Presale Base price: 1 ETH = 10 COMT</li>
+                <li> Bonus: According to the presale progress <br> 0–50ETH 10% bonus;<br>
+                    50–100 ETH 5% bonus;<br>
+                    100–200 ETH 2.5% bonus;<br>
+                    200–300 ETH 0% bonus</li>
+            </ul>
+        </div>
+        <div class="details2" style="text-align: left; width: 50%; ">
+            <ul style="list-style-type: disc; font-size: 24px; ">
+                <li> Hard cap/Soft cap: 300ETH/100ETH</li>
+                <li> Uniswap Initial liquidity
+                    ETH 240
+                    COMT 2,000
+                    Uniswap Initial</li>
+                <li> Price: 1ETH =8.33 COMT</li>
+                <li> Price buy limit: <br>Minimum : 0.5ETH<br>Maximum: 5 ETH</li>
+                <p> [Noted: All the remaining unsold tokens will be burnt]</p>
+
+            </ul>
+        </div>
+    </div>
+    <div class="social-box">
+        <div class="sec-title center sbox">
+            <h2 class="text-white" style="font-weight: 650;">Connect</h2>
+            <hr class="linee"/>
+        </div>
+        <div class="sdiv">
+            <a href="https://t.me/cometfinance" class="text-white h1 mr-3" target="_blank">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://twitter.com/CometFinance" class="text-white h1 mx-3" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://discord.gg/Q7MgeKB" class="text-white h1 mx-3" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://medium.com/@cometfinance.net" class="text-white h1 mx-3" target="_blank">
+                <i class="fab fa-medium-m"></i>
+            </a>
+            <a href="https://github.com/comet-finance" class="text-white h1 ml-3" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+    
+
+
+
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        $('#getting-started').countdown('2020/10/15', function(event) {
+        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+        $(this).html(event.strftime('<div class="counterbody"><div class="day1"><span>%D</span><p>Days</p></div></div>  <div class="counterbody"><div class="day1"><span>%H</span><p>Hours</p></div></div>   <div class="counterbody"><div class="day1"><span>%M</span><p>Minutes</p></div></div>  <div class="counterbody"><div class="day1"><span>%S</span><p>Seconds</p></div></div> '));
+    });
+    </script> 
+</body>
+</html>

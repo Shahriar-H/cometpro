@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Comet-Finance</title>
+
+        <link rel="icon" href="./favicon.png" type="image/x-icon">
+
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/css" rel="stylesheet">
+
+        <link href="./font awsome css/all.min.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/flaticon.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/owl.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/bootstrap.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/animate.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/Chart.min.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/style.css" rel="stylesheet">
+        <link href="./THOU finance _ Thousand Token _ only 1000 Tokens_files/responsive.css" rel="stylesheet">
+        <style media="screen">
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background-color: black
+            }
+            .footer {
+                background: rgba(0, 0, 0, 0.2);
+                background: url('footer.png');
+                background-position: top;
+                background-size: contain;
+            }
+            .notice-icon {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+                display: block;
+                background-color: #32b0ca;
+                overflow: visible;
+                border-radius: 100%;
+            }
+            .notice-icon::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: inherit;
+                border-radius: inherit;
+                -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+                transition: opacity 0.3s, -webkit-transform 0.3s;
+                transition: opacity 0.3s, transform 0.3s;
+                transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+                -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+                animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+                z-index: -1;
+            }
+            .roadmap {
+                background: rgba(0, 0, 0, 0.1);
+            }
+            .presale-popup .modal {
+                background: #1a0c68;
+                background: rgba(0, 0, 0, 0.6);
+            }
+            .presale-popup .close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                z-index: 99999;
+            }
+            .presale-popup .modal-content {
+                background: #218bf4;
+            }
+            .presale-popup .modal-content .countdown-timer > div,
+            .presale-section .countdown-timer > div {
+                display: inline-block;
+            }
+            .presale-popup .modal-content .wrapper,
+            .presale-section .wrapper {
+                text-align: center;
+            }
+            .presale-popup .modal-content .time,
+            .presale-section .time {
+                color: #fff;
+                font-size: 2em;
+            }
+            .presale-popup .modal-content .label,
+            .presale-section .label {
+                font-size: 1em;
+                display: block;
+                color: #fff;
+            }
+            .presale-section .time,
+            .presale-section .label {
+                color: #5132ca;
+            }
+            .presale-section h1,
+            .presale-section h2,
+            .presale-section h4,
+            .presale-section p {
+                color: #5132ca;
+            }
+            .presale-section .btn {
+                background-color: #5132ca;
+                color: #fff;
+            }
+            .presale-section .btn:hover {
+                background-color: #492db5;
+                transform: scale(1.05);
+                -webkit-transition: transform 0.4s ease;
+                transition: transform 0.4s ease;
+            }
+            .social-media {
+                background-color: #445f9e;
+                margin-bottom: -2.5rem;
+            }
+            .social-media a img {
+                width: auto;
+                max-width: 150px;
+                height: auto;
+            }
+
+            @-webkit-keyframes pulse-animation {
+                0% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0;
+                    transform: scale(1.5);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1.5);
+                }
+            }
+            @keyframes pulse-animation {
+                0% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0;
+                    transform: scale(1.5);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1.5);
+                }
+            }
+            .btn-box .btn-one {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                font-size: 18px;
+                color: #fff;
+                line-height: 30px;
+                font-weight: 500;
+                background: #4527a4;
+                padding: 15px 30px;
+                text-align: center;
+                border-radius: 30px;
+                margin-right: 35px;
+                z-index: 1;
+            }
+            .btn-box .btn-one::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: #fff;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s;
+                -webkit-transform: scale(0.2, 1);
+                transform: scale(0.2, 1);
+                z-index: -1;
+            }
+            .btn-box .btn-one:hover {
+                background: #fff;
+                color: #4527a4;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            }
+            .presale-popup .btn-box .btn-one {
+                color: #0a4d91;
+                background: #fff;
+            }
+            .presale-popup .btn-box .btn-one::before {
+                background-color: #0a4d91;
+            }
+            .presale-popup .btn-box .btn-one:hover {
+                background: #0a4d91;
+                color: #fff;
+            }
+            .btn-box .btn-one:hover::before {
+                opacity: 1;
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+
+        </style>
+        <style>
+            /* Chart.js */
+            @keyframes chartjs-render-animation {
+                from {
+                    opacity: .99
+                }
+                to {
+                    opacity: 1
+                }
+            }
+            .chartjs-render-monitor {
+                animation: chartjs-render-animation 1ms
+            }
+            .chartjs-size-monitor,
+            .chartjs-size-monitor-expand,
+            .chartjs-size-monitor-shrink {
+                position: absolute;
+                direction: ltr;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
+                pointer-events: none;
+                visibility: hidden;
+                z-index: -1
+            }
+            .chartjs-size-monitor-expand > div {
+                position: absolute;
+                width: 1000000px;
+                height: 1000000px;
+                left: 0;
+                top: 0
+            }
+            .chartjs-size-monitor-shrink > div {
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                left: 0;
+                top: 0
+            }
+        </style>
+    </head>
+
+    <body class="boxed_wrapper" style="">
+
+        <div class="preloader" style="display: none;"></div>
+        <header class="main-header home-11 fixed-header">
+            <div class="outer-container">
+                <div class="container">
+                    <div class="main-box clearfix">
+                        <div class="logo-box pull-left">
+                            <figure class="logo">
+                                <a href="index.html"><img src="llogo.png" class="mobilell" alt="logo" style="max-width:300px; margin-top: -35px; "></a>
+                                <!--<a href="index.html"><span style="color: red; font-size: 30px; font-weight: 700;">SR</span><span style="color: white; font-size: 15px; font-weight: 700;">Page <span style="color: red;">[ </span>Designing<span style="color: red;"> ]</span> </span></a>-->
+
+                            </figure>
+                        </div>
+                        <div class="menu-area pull-right clearfix">
+
+                            <div class="mobile-nav-toggler">
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li class="current dropdown">
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#features">Features</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#tokenomics">Tokenomics</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#roadmap">Roadmap</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#social">Social</a>
+                                        </li>
+                                        <li class="dropdown d-md-none">
+                                            <a href="./Registration form - Copy.pdf">Whitepaper</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="Pre-sale.html">Buy Token</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="btn-box">
+                                <a href="./Registration form - Copy.pdf">Whitepaper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky-header">
+                <div class="container clearfix">
+                    <figure class="logo-box">
+                        <!--<a href="https://thou.finance/#"><img src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/logo.png" alt="THOU logo" style="max-width:110px"></a>-->
+                        <a href="index.html"><img src="llogo.png" alt="logo" style="max-width:140px"></a>
+                    </figure>
+                    <div class="menu-area">
+                        <nav class="main-menu clearfix">
+
+
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent" style="display: none;">
+                                <ul class="navigation clearfix" style="display: none;">
+                                    <li class="current dropdown">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#features">Features</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#tokenomics">Tokenomics</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#roadmap">Roadmap</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#social">Social</a>
+                                    </li>
+                                    <li class="dropdown d-md-none">
+                                        <a href="./Registration form - Copy.pdf">Whitepaper</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="Pre-Sale.html">Buy Token</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <nav class="menu-box mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 731px;" tabindex="0">
+                    <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="nav-logo">
+                            <a href="index.html"><img src="llogo.png" alt="comet logo" title="comet" style="max-width:100px; margin-left: -15px;" class="mCS_img_loaded"></a>
+                        </div>
+                        <div class="menu-outer">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent" style="display: none !important;">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#features">Features</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#tokenomics">Tokenomics</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#roadmap">Roadmap</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#social">Social</a>
+                                    </li>
+                                    <li class="dropdown d-md-none">
+                                        <a href="./Registration form - Copy.pdf">Whitepaper</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="presale.php">Buy Token</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Connect</h4>
+                        </div>
+                        <div class="social-links py-0">
+                            <ul class="clearfix">
+                                <li>
+                                    <a href="https://twitter.com/CometFinance" rel="noreferrer noopener nofollow">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/Q7MgeKB" rel="noreferrer noopener nofollow">
+                                        <span class="fab fa-discord"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://t.me/cometfinance" rel="noreferrer noopener nofollow">
+                                        <span class="fab fa-telegram-plane"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://medium.com/@cometfinance.net" rel="noreferrer noopener nofollow">
+                                        <span class="fab fa-medium-m"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Comet-finance" rel="noreferrer noopener nofollow">
+                                        <span class="fab fa-github"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;">
+                        <div class="mCSB_draggerContainer">
+                            <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 0px; height: 0px; top: 0px;" oncontextmenu="return false;">
+                                <div class="mCSB_dragger_bar" style="line-height: 0px;"></div>
+                            </div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section class="banner-style-11 centred">
+            <div class="vector-image">
+                <figure class="image image-1 float-bob-y"><img src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/vactor-7.png" style="opacity: .7;" alt=""></figure>
+                <figure class="image image-2 float-bob-y"><img src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/vactor-8.png" style="opacity: .7;" alt=""></figure>
+            </div>
+            <div class="image-layer" style="background-image:linear-gradient(rgba(0, 0, 0, 0.66),transparent), url(bgg.png) ;"></div>
+            <div class="container">
+                <div class="content-box" style="max-width: 1150px !important;">
+                    <h1>Comet Finance</h1>
+                    <h2 style="color: white; margin-top: -30px; margin-bottom: 20px;">The project that will revolutionize the DeFi economy with locked liquidity</h2>
+                    <div class="text">A Decentralized community-driven DeFi protocol emphasizes on Staking and Locked liquidity with limited supply. The decisions and actions of Comet Finance are made by its members and community to assure equity and fairness for all.</div>
+                    <div class="btn-box">
+                        <a href="#features" class="btn-one mr-0">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="organization-section centred" id="features">
+            <div class="container">
+                <div class="sec-title center">
+                    <h2 class="text-white">What makes us better?</h2>
+                    <p class="text-white">Robust technology with integrated DeFi features for the benefit of community</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 single-column">
+                        <div class="single-item wow flipInY animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: flipInY;">
+                            <div class="inner-box">
+                                <div class="left-layer"></div>
+                                <div class="right-layer"></div>
+                                <div class="icon-box">
+                                    <i class="fa fa-funnel-dollar text-primary"></i>
+                                </div>
+                                <h4>Limited Total Supply</h4>
+                                <div class="text">Carefully crafted and calculated Limited supply with only 1000 tokens in total.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 single-column">
+                        <div class="single-item wow flipInY animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: flipInY;">
+                            <div class="inner-box">
+                                <div class="left-layer"></div>
+                                <div class="right-layer"></div>
+                                <div class="icon-box">
+                                    <i class="fa fa-hand-holding-usd text-primary"></i>
+                                </div>
+                                <h4>Distribution Limits</h4>
+                                <div class="text">Limited supply distributed among the commmunity members.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 single-column">
+                        <div class="single-item wow flipInY animated" data-wow-delay="600ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: flipInY;">
+                            <div class="inner-box">
+                                <div class="left-layer"></div>
+                                <div class="right-layer"></div>
+                                <div class="icon-box">
+                                    <i class="fa fa-shield-alt text-primary"></i>
+                                </div>
+                                <h4>Locked Liquidity</h4>
+                                <div class="text">Initial Liquidity locked for one year to gain trust from the community.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="feature-style-13 elements sec-pad-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12 content-column">
+                        <div id="content_block_38">
+                            <div class="content-box wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                                <div class="sec-title">
+                                    <h2 class="text-white">Carefully crafted to rise high.</h2>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="single-item">
+                                        <div class="icon-box">
+                                            <i class="fa fa-chart-line"></i>
+                                        </div>
+                                        <h3 class="text-white">Supply and Demand</h3>
+                                        <div class="text text-white">Whenever the supply is low, the demand is high, the price rises high.</div>
+                                    </div>
+                                    <div class="single-item">
+                                        <div class="icon-box">
+                                            <i class="fas fa-network-wired"></i>
+                                        </div>
+                                        <h3 class="text-white">Community Owned</h3>
+                                        <div class="text text-white">where the stakes are held by the community, it gives power back to the people.</div>
+                                    </div>
+                                    <div class="single-item">
+                                        <div class="icon-box text-success">
+                                            <i class="fas fa-fingerprint"></i>
+                                        </div>
+                                        <h3 class="text-white">Secured Investment</h3>
+                                        <div class="text text-white">where all the liquidity provide to the pool is locked and secured for at least a year.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 image-column">
+                        <div id="image_block_36">
+                            <div class="image-box wow slideInRight animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: slideInRight;">
+                                <figure class="image clearfix js-tilt" style="will-change: transform; transform: perspective(700px) rotateX(0deg) rotateY(0deg);"><img src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/illustration-31.png" alt=""><div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden;">
+                                        <div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; pointer-events: none; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); width: 1340px; height: 1340px; transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0;"></div>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="centred" id="tokenomics">
+            <div class="container">
+                <div class="sec-title center">
+                    <h2 class="text-white mb-5">Tokenomics</h2>
+                </div>
+                <div class="named" style="margin-left: 34%; margin-right: 30%; margin-bottom: 40px;">
+                    <pre style="color: white; margin:auto;padding:0; font-weight: 600;font-size: 23px;text-align: left;">Name:               Comet Finance.</pre>
+                    <pre style="color: white;margin:auto;padding:0;font-weight: 600;font-size: 23px; text-align: left;">Symble:             COMT</pre>
+                    <pre style="color: white;margin:0;padding:0;font-weight: 600;font-size: 23px;text-align: left;">Total Supply:       10,000 COMT.</pre>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-lg-7 mx-auto">
+                        <p class="text-white">Total Distribution and allocation of tokens</p>
+                        <div style="max-width:600px" class="mx-auto">
+                            <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                    <div class=""></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                    <div class=""></div>
+                                </div>
+                            </div>
+                            <canvas id="myChart1" width="750" height="750" style="display: block; height: 600px; width: 600px;" class="chartjs-render-monitor"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="centred mb-5 presale-section pb-5 d-none" id="presale">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-6 mx-auto text-left">
+                        <h4 class="text-white mb-3">THOU is available at 1:1 ratio with ETH</h4>
+                        <h2 class="text-white mb-4">1 THOU = 1 ETH</h2>
+                        <p class="lead text-white mb-3">Total Supply = 1000 Tokens</p>
+                        <p class="lead text-white mb-2">Presale Phase 1 = 45 Tokens
+                            <b>( 50% Bonus )</b>
+                        </p>
+                        <p class="lead text-white mb-2">Presale Phase 2 = 595 Tokens
+                            <b>( 25% Bonus )</b>
+                        </p>
+                        <p class="lead text-white mb-2">Uniswap Listing = 300 Tokens
+                            <b>( 0 Bonus )</b>
+                        </p>
+                    </div>
+                    <div class="col-md-8 col-lg-6 mx-auto">
+                        <div class="card card-body shadow bg-white rounded mx-auto wow rubberBand animated" style="visibility: visible; animation-name: rubberBand;">
+                            <h1 class="mb-2 d-none">Presale is Live</h1>
+                            <h1 class="mb-2">Presale Soon!</h1>
+                            <h2 class="mb-2">Phase-1 presale with 50% bonus!</h2>
+                            <p class="mb-2 text-uppercase">limited time only</p>
+                            <div data-countdown="2020/10/11 06:00:00" class="countdown-timer text-uppercase d-none">
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">07</span>
+                                        <span class="label">days</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">16</span>
+                                        <span class="label">hours</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">55</span>
+                                        <span class="label">minutes</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">50</span>
+                                        <span class="label">seconds</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box mt-3">
+                                <a href="Pre-Sale.html" class="btn-one mr-0">Get it Now!</a>
+                            </div>
+                            <h4 class="mt-3 d-none">Connect on Telegram or Discord</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="centred roadmap" id="roadmap">
+            <div class="container py-5">
+                <div class="sec-title center">
+                    <h2 class="text-white mt-4 mb-5">Roadmap &amp; Plans</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-timeline">
+                            <div class="timeline wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                                <a class="timeline-content color1">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-rocket"></i>
+                                    </div>
+                                    <h3 class="title">1. Project Launch</h3>
+                                    <p class="description">
+                                        
+                                        <ul style="text-align: left !important; margin-left: 50px; margin-right:5px">
+                                            <li style="color: black; list-style-type: disc !important;"> Planning and formation of the main team.</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Launch official website.</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Creation of Solidity contracts.</li>
+                                        </ul>
+                                   </p>
+                                </a>
+                            </div>
+                            <div class="timeline wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                                <a class="timeline-content color2">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </div>
+                                    <h3 class="title">2. Presale Phase</h3>
+                                    <p class="description">
+                                        <ul style="text-align: left !important; margin-left: 80px;" class="mar-le">
+                                            <li style="color: black; list-style-type: disc !important;"> Start of first marketing campaign,</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Private sale Tokens and distribution among the members
+                                            </li>
+
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="timeline wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                                <a class="timeline-content color3">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                    <h3 class="title">3. UNISWAP LIST & STACKING DAPP</h3>
+                                    <p class="description">
+                                        <ul style="text-align: left !important; margin-left: 50px;">
+                                            <li style="color: black; list-style-type: disc !important;"> Pool activation in Uniswap 
+                                                </li>
+                                            <li style="color: black; list-style-type: disc !important;"> Launch of Stacking dApp </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="timeline wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+                                <a class="timeline-content color4">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-sort-amount-up"></i>
+                                    </div>
+                                    <h3 class="title">4. Project Boost</h3>
+                                    <p class="description">
+                                        <ul style="text-align: left !important; margin-left: 80px; margin-right:5px" class="mar-le">
+                                            <li style="color: black; list-style-type: disc !important;"> Start of Second marketing campaign.</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Lists on New exchanges</li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="timeline wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+                                <a class="timeline-content color5">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-rocket"></i>
+                                    </div>
+                                    <h3 class="title">5. Sub-Projects and Platforms</h3>
+                                    <p class="description">
+                                        <ul style="text-align: left !important; margin-left: 50px; margin-right:5px">
+                                            <li style="color: black; list-style-type: disc !important;"> Expansion of the project through different dApps.</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Search for medium/high-scale partners.</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Launch new products with partners.</li>
+                                            <li style="color: black; list-style-type: disc !important;"> Continuation to the roadmap v.2</li>
+
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="centred social-media" id="social">
+            <div class="container py-5">
+                <div class="sec-title center">
+                    <h2 class="text-white mt-4">Connect</h2>
+                </div>
+                <div class="social-links py-4">
+                    <a href="https://t.me/cometfinance" title="telegram" class="text-white h1 mr-3" rel="noreferrer noopener nofollow" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://twitter.com/CometFinance" title="twitter" class="text-white h1 mx-3" rel="noreferrer noopener nofollow" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://discord.gg/Q7MgeKB" title="discord" class="text-white h1 mx-3" rel="noreferrer noopener nofollow" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://medium.com/@cometfinance.net" title="medium" class="text-white h1 mx-3" rel="noreferrer noopener nofollow" target="_blank">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    <a href="https://github.com/comet-finance" title="github" class="text-white h1 ml-3" rel="noreferrer noopener nofollow" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="text-center pt-4 pb-5 other-links">
+                    <a href="https://etherscan.io/token/0x65002003e0d124ceeaa783cc7cf64dfeffcbfed0" class="m-3" rel="noreferrer noopener nofollow" target="_blank"><img src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/etherscan-logo-light.png" alt="etherscan" title="view contract and token details on etherscan" class="wow slideInUp animated" style="visibility: visible; animation-name: slideInUp;"></a>
+                    <a href="https://app.uniswap.org/#/swap/0x65002003e0d124ceeaa783cc7cf64dfeffcbfed0" class="m-3" rel="noreferrer noopener nofollow" target="_blank"><img src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/uniswap.png" alt="Uniswap" title="trade on Uniswap" class="wow slideInUp animated" style="visibility: visible; animation-name: slideInUp;"></a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="centred presale-popup">
+            <a href="https://thou.finance/#" class="btn p-1 notice-icon shadow" id="presale-popup-btn" data-toggle="modal" data-target="#presalePopup">
+                <i class="fa fa-bell text-white fa-2x"></i>
+            </a>
+
+            <div class="modal fade" id="presalePopup" tabindex="-1" role="dialog" aria-labelledby="presalePopupTitle" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content shadow">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.621 12l6.718-6.718-2.121-2.12L12.5 9.878 5.782 3.16l-2.12 2.121L10.378 12 3.66 18.718l2.121 2.12 6.718-6.717 6.718 6.718 2.12-2.121z" fill="#fff" fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="modal-body">
+                            <h1 class="mb-2 text-white d-none">Presale is Live</h1>
+                            <h1 class="mb-2 text-white">Presale Soon!</h1>
+                            <h3 class="mb-2 text-white">Phase-1 presale with 20% bonus!</h3>
+                            <p class="mb-2 text-white text-uppercase">limited time only</p>
+                            <div data-countdown="2020/10/11 06:00:00" class="countdown-timer text-uppercase d-none">
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">07</span>
+                                        <span class="label">days</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">16</span>
+                                        <span class="label">hours</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">55</span>
+                                        <span class="label">minutes</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <div class="wrapper">
+                                        <span class="time">50</span>
+                                        <span class="label">seconds</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box mt-3">
+                                <a href="Pre-Sale.html" class="btn-one mr-0">Grab it Now!</a>
+                            </div>
+                            <h4 class="mt-3 d-none">Connect on Telegram or Discord</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+            <div class="container py-4 text-center">
+                <div class="copyright text-warning pt-4">© 2020 Comet-Finance. All Rights Reserved.</div>
+            </div>
+        </footer>
+
+
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/jquery.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/popper.min.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/bootstrap.min.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/owl.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/wow.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/validation.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/jquery.fancybox.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/appear.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/scrollbar.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/jquery.paroller.min.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/tilt.jquery.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/Chart.min.js.download"></script>
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/jquery.countdown.min.js.download"></script>
+
+        <script src="./THOU finance _ Thousand Token _ only 1000 Tokens_files/script.js.download"></script>
+        <script type="text/javascript">
+            var ctx1 = document.getElementById('myChart1').getContext('2d');
+            var myChart1 = new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Staking(75%)', 'Presale(10%)', 'Team(7%)','Uniswap(5%)','Marketing(3%)'
+                    ],
+                    datasets: [
+                        {
+                            label: 'Token Distribution',
+                            data: [
+                                7500, 1000, 700, 500, 300
+                            ],
+                            backgroundColor: [
+                               'rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)','rgba(76, 0, 130, 0.911)', 'rgba(255, 206, 86, 1)','rgb(3, 184, 114)'
+                            ],
+                            borderColor: [
+                            'rgba(54, 162, 235, 1)','rgba(255, 99, 132, 1)','rgba(76, 0, 130, 0.911)', 'rgba(255, 206, 86, 1)','rgb(3, 184, 114)'
+                            ],
+                            borderWidth: 1,
+                            color: '#fff'
+                        }
+                    ]
+                },
+                options: {
+                    layout: {
+                        padding: {
+                            left: 30,
+                            right: 30,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            fontColor: '#fff',
+                            boxWidth: 16
+                        }
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    }
+                }
+            });
+
+            $('[data-countdown]').each(function () {
+                var $this = $(this),
+                    finalDate = $(this).data('countdown');
+                $this.countdown(finalDate, function (e) {
+                    $this.html(e.strftime('<div class="col-xs-6 col-sm-3"><div class="wrapper"><span class="time">%D</span><span class="label">days</span></div></div><div class="col-xs-6 col-sm-3"><div class="wrapper"><span class="time">%H</span><span class="label">hours</span></div></div><div class="col-xs-6 col-sm-3"><div class="wrapper"><span class="time">%M</span><span class="label">minutes</span></div></div><div class="col-xs-6 col-sm-3"><div class="wrapper"><span class="time">%S</span><span class="label">seconds</span></div></div>'));
+                });
+            });
+
+            $(document).on('scroll', function () {
+                $('#presalePopup').modal('show');
+                $(document).off('scroll');
+            });
+        </script>
+
+
+    </body>
+</html>

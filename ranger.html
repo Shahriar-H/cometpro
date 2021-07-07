@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./jquery-3.5.1.min.js">
+    <link rel="stylesheet" href="./bootstrap-slider.min.css">
+    <link rel="stylesheet" href="./bootstrap-slider.min.js">
+</head>
+<body>
+    <input id="ex13" type="text" data-slider-ticks="[0, 100, 200, 300, 400]" data-slider-ticks-snap-bounds="30" data-slider-ticks-labels='["$0", "$100", "$200", "$300", "$400"]'/>
+<script>
+   // Instantiate a slider
+var mySlider = $("input.slider").slider();
+
+// Call a method on the slider
+var value = mySlider.slider('getValue');
+
+// For non-getter methods, you can chain together commands
+	mySlider
+		.slider('setValue', 5)
+		.slider('setValue', 7);
+});
+</script>
+</body>
+</html>

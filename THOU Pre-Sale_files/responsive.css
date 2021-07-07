@@ -1,0 +1,277 @@
+@media only screen and (min-width:200px) and (max-width:991px){
+    body{
+        padding: 50px 15px !important;
+    }
+    .head{
+        margin-bottom: 30px;
+    }
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 120px !important;   
+    }
+    #getting-started{
+        max-width: 550px !important;
+        margin: auto;
+        display: flex;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:670px){
+    .counterbody .day1 p{
+        font-size: 15px !important;
+        
+    }
+    .counterbody .day1{
+        margin: 5px;
+        padding: 30px 0 !important;
+        width: 120px !important;   
+    }
+    .counterbody .day1 span{
+        font-size: 30px !important;
+        
+    }
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 80px !important;   
+    }
+    .counterbody .day1 span{
+        font-size: 22px !important;
+        
+    }
+    #getting-started{
+        max-width: 400px !important;
+        margin: auto;
+        display: flex;
+        
+    }
+
+
+}
+
+@media only screen and (min-width:200px) and (max-width:477px){
+
+    .counterbody .day1{
+        padding: 25px 0 !important;
+        width: 80px !important;   
+    }
+    #getting-started{
+        max-width: 390px !important;
+        margin: auto;
+        display: flex;
+        
+    }
+    .presale-details{
+        display: inline-block !important;
+    }
+    .details1{
+        width: 100% !important;
+    }
+    .details2{
+        width: 100% !important;
+    }
+
+    
+
+
+}
+
+@media only screen and (max-width:452px){
+    h1{
+        font-size: 32px;
+    }
+    .social-box{
+        margin-top: 15%;
+    }
+    #getting-started{
+        max-width: 390px !important;
+        margin: auto;
+        display: flex;
+        
+    }
+}
+@media only screen and (max-width:425px){
+    h1{
+        font-size: 32px;
+    }
+    .social-box{
+        margin-top: 15%;
+    }
+    #getting-started{
+        max-width: 390px !important;
+        margin: auto;
+        display: flex;
+        
+    }
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 75px !important;   
+    }
+}
+
+@media only screen and (min-width:200px) and (max-width:436px){
+
+ 
+    #getting-started{
+        max-width: 400px !important;
+        margin: auto;
+        display: flex;
+        
+    }
+    
+
+
+}
+
+@media only screen and (min-width:200px) and (max-width:399px){
+    .counterbody .day1 span{
+        font-size: 25px !important;
+        
+    }
+    .counterbody .day1 p{
+        font-size: 16px !important;
+        
+    }
+
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 70px !important;   
+    }
+    #getting-started{
+        max-width: 360px !important;
+        margin: auto;
+        
+    }
+    .details1 ul, .details2 ul{
+        font-size: 20px !important;
+    }
+
+
+
+
+}
+@media only screen and (min-width:200px) and (max-width:398px){
+
+
+
+    .counterbody .day1 span{
+        font-size: 25px !important;
+        
+    }
+    .counterbody .day1 p{
+        font-size: 16px !important;
+        
+    }
+
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 70px !important;   
+    }
+    #getting-started{
+        max-width: 360px !important;
+        margin: auto;
+        
+    }
+
+
+}
+@media only screen and (min-width:200px) and (max-width:391px){
+
+    .social-box .sdiv a i{
+        font-size: 25px;
+    }
+    .counterbody .day1 span{
+        font-size: 25px !important;
+        
+    }
+    .counterbody .day1 p{
+        font-size: 16px !important;
+        
+    }
+
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 70px !important;   
+    }
+    #getting-started{
+        max-width: 360px !important;
+        margin: auto;
+        
+    }
+
+}
+
+
+@media only screen and (min-width:200px) and (max-width:380px){
+
+    .social-box .sdiv a i{
+        font-size: 25px;
+    }
+    .counterbody .day1 span{
+        font-size: 21px !important;
+        
+    }
+    .counterbody .day1 p{
+        font-size: 13px !important;
+        
+    }
+
+    .counterbody .day1{
+        padding: 30px 0 !important;
+        width: 70px !important;  
+        margin: 3px !important;
+ 
+    }
+    #getting-started{
+        max-width: 300px !important;
+        margin: auto;
+        
+    }
+
+
+}
+@media only screen and (min-width:200px) and (max-width:325px){
+
+    .social-box .sdiv a i{
+        font-size: 25px;
+    }
+    .counterbody .day1 span{
+        font-size: 21px !important;
+        
+    }
+    .counterbody .day1 p{
+        font-size: 13px !important;
+        
+    }
+
+    .counterbody .day1{
+        padding: 25px 0 !important;
+        width: 60px !important;  
+        margin: 3px !important;
+ 
+    }
+    #getting-started{
+        max-width: 260px !important;
+        margin: auto;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
+
